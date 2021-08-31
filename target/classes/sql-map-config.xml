@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.codebox.project.dto.MemberVO" alias="member"/>
+		<typeAlias type="com.codebox.project.dto.ProjectVO" alias="project"/>
+		<typeAlias type="com.codebox.project.dto.CodeVO" alias="code"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mappings/member-mapping.xml"/>
+		<mapper resource="mappings/project-mapping.xml"/>
+		<mapper resource="mappings/code-mapping.xml"/>
+	</mappers>
+</configuration>

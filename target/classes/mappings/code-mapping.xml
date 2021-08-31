@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CodeDAO">
+	<select id="getAllCodes" resultType="code">
+		SELECT C.codeseq, C.langtype, C.writedate, C.moddate, C.author,
+		C.title, C.content, C.likecount
+		FROM code C, project P, projectsource PS
+		WHERE P.projectseq=#{projectseq}
+		AND P.projectseq=PS.projectseq
+		AND C.codeseq=PS.codeseq
+		ORDER BY C.title ASC
+	</select>
+	
+	<select id="getCode" resultType="code">
+		SELECT * FROM code
+		WHERE codeseq=#{codeseq}
+	</select>
+	
+	<insert id="writeCode">
+		INSERT INTO code(codeseq, title, content)
+		VALUES(codeseq.NEXTVAL, #{title}, #{content})
+	</insert>
+</mapper>
