@@ -34,4 +34,12 @@ public class MemberDAO {
 	public void insertMember(MemberVO vo) {
 		mybatis.insert("MemberDAO.insertMember", vo);
 	}
+	
+	public void updateMember(MemberVO vo) {
+		mybatis.update("MemberDAO.updateMember", vo);
+	}
+	
+	public void deleteMember(MemberVO vo) {
+		mybatis.delete("MemberDAO.deleteMember", vo);
+	}
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="FileDAO">
+	<select id="getAllFiles" resultType="file">
+		SELECT fileseq, filetype, writedate, moddate, author, title, likecount
+		FROM files
+		WHERE parentdirectoryseq=#{folderseq}
+	</select>
+	
+	<select id="getFile" resultType="file">
+		SELECT fileseq, filetype, writedate, moddate, author, title, content, likecount
+		FROM files
+		WHERE fileseq=#{fileseq}
+	</select>
+</mapper>

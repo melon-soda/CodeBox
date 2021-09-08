@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1100px;
+}
+
+#side_menu {
+	width: 25%;
+	float: left;
+}
+
+#main {
+	width: 75%;
+	float: left;
+}
+
+#side_menu ul{
+	padding-left: 10px;
+}
+
+#side_menu li{
+	list-style: none;
+}

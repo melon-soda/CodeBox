@@ -2,27 +2,28 @@ package com.codebox.project.dto;
 
 import java.sql.Timestamp;
 
-public class CodeVO {
-	private int codeseq;
-	private String langtype;
+public class FileVO {
+	private int fileseq;
+	private String filetype;
 	private Timestamp writeDate;
 	private Timestamp modDate;
 	private String author;
 	private String title;
 	private String content;
 	private int likeCount;
+	private int parentdirectoryseq;
 	
-	public int getCodeseq() {
-		return codeseq;
+	public int getFileseq() {
+		return fileseq;
 	}
-	public void setCodeseq(int codeseq) {
-		this.codeseq = codeseq;
+	public void setFileseq(int fileseq) {
+		this.fileseq = fileseq;
 	}
-	public String getLangtype() {
-		return langtype;
+	public String getFiletype() {
+		return filetype;
 	}
-	public void setLangtype(String langtype) {
-		this.langtype = langtype;
+	public void setFiletype(String filetype) {
+		this.filetype = filetype;
 	}
 	public Timestamp getWriteDate() {
 		return writeDate;
@@ -60,11 +61,16 @@ public class CodeVO {
 	public void setLikeCount(int likeCount) {
 		this.likeCount = likeCount;
 	}
-
+	public int getParentdirectoryseq() {
+		return parentdirectoryseq;
+	}
+	public void setParentdirectoryseq(int parentdirectoryseq) {
+		this.parentdirectoryseq = parentdirectoryseq;
+	}
 	@Override
 	public String toString() {
-		return "CodeVO [codeseq=" + codeseq + ", langtype=" + langtype + ", writeDate=" + writeDate + ", modDate="
+		return "FileVO [fileseq=" + fileseq + ", filetype=" + filetype + ", writeDate=" + writeDate + ", modDate="
 				+ modDate + ", author=" + author + ", title=" + title + ", content=" + content + ", likeCount="
-				+ likeCount + "]";
+				+ likeCount + ", parentdirectoryseq=" + parentdirectoryseq + "]";
 	}
 }

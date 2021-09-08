@@ -30,7 +30,7 @@
 							</tr>
 							<c:forEach items="${projectList}" var="project">
 								<tr>
-									<td><a href="projectDetails?projectseq=${project.projectseq}">${project.title}</a></td>
+									<td><a href="projectDetail?title=${project.title}">${project.title}</a></td>
 									<td>${project.createDate}</td>
 									<td>${project.updateDate}</td>
 									<td>${project.likeCount}</td>

@@ -22,7 +22,7 @@
 				</div>
 				<div id="proceed">
 					<input type="button" value="다음" onclick="proceedToJoin()">
-					<input type="button" value="취소" onclick="backToIndex()">
+					<input type="button" value="취소" onclick="history.go(-1)">
 				</div>			
 			</form>
 		</article>

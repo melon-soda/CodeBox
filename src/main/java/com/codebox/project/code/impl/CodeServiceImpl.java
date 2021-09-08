@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.codebox.project.code.CodeService;
 import com.codebox.project.dao.CodeDAO;
-import com.codebox.project.dto.CodeVO;
+import com.codebox.project.dto.FileVO;
 import com.codebox.project.dto.ProjectVO;
 
 @Service("codeService")
@@ -16,12 +16,12 @@ public class CodeServiceImpl implements CodeService {
 	private CodeDAO codeDao;
 
 	@Override
-	public List<CodeVO> getAllCodes(ProjectVO vo) {
+	public List<FileVO> getAllCodes(ProjectVO vo) {
 		return codeDao.getAllCodes(vo);
 	}
 
 	@Override
-	public CodeVO getCode(CodeVO vo) {
+	public FileVO getCode(FileVO vo) {
 		return codeDao.getCode(vo);
 	}
 }

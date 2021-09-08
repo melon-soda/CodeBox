@@ -2,11 +2,11 @@ package com.codebox.project.code;
 
 import java.util.List;
 
-import com.codebox.project.dto.CodeVO;
+import com.codebox.project.dto.FileVO;
 import com.codebox.project.dto.ProjectVO;
 
 public interface CodeService {
-	List<CodeVO> getAllCodes(ProjectVO vo);
+	List<FileVO> getAllCodes(ProjectVO vo);
 	
-	CodeVO getCode(CodeVO vo);
+	FileVO getCode(FileVO vo);
 }

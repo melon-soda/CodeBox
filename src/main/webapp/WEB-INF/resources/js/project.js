@@ -1,7 +1,6 @@
 /**
  * 
  */
-
 function projectCreateForm() {
 	$('#project_form').attr('action', 'projectCreateForm').submit();
 }

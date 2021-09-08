@@ -15,4 +15,15 @@
 		INSERT INTO member(id, pwd, email, phone, address, profilepic)
 		VALUES(#{id}, #{pwd}, #{email}, #{phone}, #{address}, #{profilePic})
 	</insert>
+	
+	<update id="updateMember">
+		UPDATE member
+		SET pwd=#{pwd}, email=#{email}, phone=#{phone}, address=#{address}, profilepic=#{profilePic}
+		WHERE id=#{id}
+	</update>
+	
+	<delete id="deleteMember">
+		DELETE member
+		WHERE id=#{id}
+	</delete>
 </mapper>

@@ -4,12 +4,14 @@
 	<typeAliases>
 		<typeAlias type="com.codebox.project.dto.MemberVO" alias="member"/>
 		<typeAlias type="com.codebox.project.dto.ProjectVO" alias="project"/>
-		<typeAlias type="com.codebox.project.dto.CodeVO" alias="code"/>
+		<typeAlias type="com.codebox.project.dto.FolderVO" alias="folder"/>
+		<typeAlias type="com.codebox.project.dto.FileVO" alias="file"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="mappings/member-mapping.xml"/>
 		<mapper resource="mappings/project-mapping.xml"/>
-		<mapper resource="mappings/code-mapping.xml"/>
+		<mapper resource="mappings/folder-mapping.xml"/>
+		<mapper resource="mappings/file-mapping.xml"/>
 	</mappers>
 </configuration>

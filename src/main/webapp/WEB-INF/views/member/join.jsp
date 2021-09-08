@@ -45,7 +45,7 @@
 				<div id="proceed">
 					<input type="button" value="등록" onclick="register()">
 					<input type="reset" value="초기화">
-					<input type="button" value="나가기" onclick="backToIndex()">
+					<input type="button" value="나가기" onclick="location.href='index'">
 				</div>
 			</form>
 		</article>

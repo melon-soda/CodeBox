@@ -10,7 +10,3 @@ function proceedToJoin() {
 		$('.agree').focus();
 	}
 }
-
-function backToIndex() {
-	$('#join').attr('action', 'index').attr('method', 'get').submit();
-}

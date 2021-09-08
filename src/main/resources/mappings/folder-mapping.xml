@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="FolderDAO">
+	<select id="getAllFolders" resultType="folder">
+		SELECT *
+		FROM folder
+		WHERE parentdirectoryseq=#{folderseq}
+		ORDER BY title DESC
+	</select>
+	
+	<select id="getProjectTopFolder" parameterType="project" resultType="folder">
+		SELECT *
+		FROM folder
+		WHERE title=#{title}
+		AND parentdirectoryseq IS NULL
+	</select>
+	
+	<insert id="createProjectFolder">
+		INSERT INTO folder(folderseq, title, parentdirectoryseq)
+		VALUES(folderseq.NEXTVAL, #{title}, NULL)
+	</insert>
+</mapper>

@@ -15,11 +15,13 @@
 	<mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**"/>
 	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**"/>
 	<mvc:resources location="/WEB-INF/views/board/" mapping="/board/**"/>
-	<mvc:resources location="/WEB-INF/views/project/" mapping="/project/**"/>
 	<mvc:resources location="/WEB-INF/views/common/" mapping="/common/**"/>
+	<mvc:resources location="/WEB-INF/views/files/" mapping="/files/**"/>
+	<mvc:resources location="/WEB-INF/views/folder/" mapping="/folder/**"/>
 	<mvc:resources location="/WEB-INF/views/home/" mapping="/home/**"/>
 	<mvc:resources location="/WEB-INF/views/member/" mapping="/member/**"/>
 	<mvc:resources location="/WEB-INF/views/mypage/" mapping="/mypage/**"/>
+	<mvc:resources location="/WEB-INF/views/project/" mapping="/project/**"/>
 	
 	<!-- View Resolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

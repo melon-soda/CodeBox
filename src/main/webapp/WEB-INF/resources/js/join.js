@@ -24,6 +24,18 @@ function register() {
 	}
 }
 
-function backToIndex() {
-	$('#join_form').attr('action', 'index').attr('method', 'get').submit();
+function update() {
+	if($('#pwd').val() === "") {
+		alert("비밀번호를 입력해주세요!");
+		$('#pwd').focus();
+	} else if($('#pwd').val() !== $('#pwdCheck').val()) {
+		alert("비밀번호가 일치하지 않습니다!");
+		$('#pwd').focus();
+	} else if($('#email').val() === "") {
+		alert("이메일을 입력해주세요!");
+		$('#email').focus();
+	} else {
+		$('#join_form').attr('encoding', 'multipart/form-data');
+		$('#join_form').attr('action', 'update').submit();
+	}
 }
