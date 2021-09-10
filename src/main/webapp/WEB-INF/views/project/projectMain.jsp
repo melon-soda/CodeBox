@@ -11,7 +11,7 @@
 	<body>
 		<form id="project_form" name="form" method="post">
 			<div id="wrap">
-	<%@ include file="../common/header.jsp" %>
+<%@ include file="../common/header.jsp" %>
 				<div class="clear">
 				</div>
 				<div id="main">
@@ -39,7 +39,7 @@
 						</table>
 					</div>
 				</div>
-	<%@ include file="../common/footer.jsp" %>
+<%@ include file="../common/footer.jsp" %>
 			</div>
 		</form>
 	</body>

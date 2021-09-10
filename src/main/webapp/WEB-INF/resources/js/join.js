@@ -2,13 +2,25 @@
  * 
  */
 
+function checkIdDup() {
+	if($('#id').val() === "") {
+		alert("아이디를 입력해 주세요!");
+		$('#id').focus();
+		return;
+	}
+	
+	var url="idDupCheck?id=" + $('#id').val();
+	
+	window.open(url, "아이디 중복체크", "toolbar=no, menubar=no, scrollbars=no, resizeable=no, width=400, height=200");
+}
+
 function register() {
 	if($('#id').val() === "") {
 		alert("아이디를 입력해 주세요!");
 		$('#id').focus();
-/*	} else if($('#id').val() !== $('#reid').val()) {
+	} else if($('#id').val() !== $('#reid').val()) {
 		alert("아이디 중복체크를 해주세요!");
-		$('#id').focus();	*/
+		$('#id').focus();
 	} else if($('#pwd').val() === "") {
 		alert("비밀번호를 입력해주세요!");
 		$('#pwd').focus();

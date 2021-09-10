@@ -62,8 +62,30 @@ public class MemberController {
 		return "member/join";
 	}
 	
+	@RequestMapping(value="/idDupCheck", method=RequestMethod.GET)
+	public String idDupCheckView(@RequestParam(value="id") String id, Model model) {
+		model.addAttribute("id", id);
+		
+		return "member/idDupCheck";
+	}
+	
+	@RequestMapping(value="/idDupCheck", method=RequestMethod.POST)
+	public String idDupCheckAction(@RequestParam(value="id") String id, Model model) {
+		MemberVO user = memberService.getMember(id);
+		
+		if(user != null) {
+			model.addAttribute("memberAlreadyExists", 1);
+		} else {
+			model.addAttribute("memberAlreadyExists", -1);
+		}
+		
+		model.addAttribute("id", id);
+		
+		return "member/idDupCheck";
+	}
+	
 	@RequestMapping(value="/join")
-	public String joinAction(@RequestParam(value="profile_Pic") MultipartFile uploadFile, MemberVO vo, HttpSession session) {
+	public String joinAction(@RequestParam(value="profile_Pic") MultipartFile uploadFile, MemberVO vo, HttpSession session, Model model) {
 		String fileName = "";
 		
 		if(!uploadFile.isEmpty()) {
@@ -86,7 +108,9 @@ public class MemberController {
 
 		memberService.insertMember(vo);
 		
-		return "member/login";
+		model.addAttribute("loginUser", vo);
+		
+		return "home/index";
 	}
 	
 	@RequestMapping(value="/mypage")

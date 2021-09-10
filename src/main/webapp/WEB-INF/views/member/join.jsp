@@ -11,13 +11,14 @@
 			<div class="clear">
 			</div>
 			<h2>회원 정보 입력</h2>
-			<form id="join_form" method="post" enctype="multipart/form-data">
+			<form id="join_form" name="join_form" method="post" enctype="multipart/form-data">
 				<fieldset>
 					<legend>Required</legend>
 					
 					<label>User ID</label>
-					<input type="text" name="id" id="id"><br>
-					<input type="hidden" name="reid" id="reid"><br>
+					<input type="text" name="id" id="id">
+					<input type="hidden" name="reid" id="reid">
+					<input type="button" value="중복 체크" id="dup" onclick="checkIdDup()"><br>
 					
 					<label>Password</label>
 					<input type="password" name="pwd" id="pwd"><br>

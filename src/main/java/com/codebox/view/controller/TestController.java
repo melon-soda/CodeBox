@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestController {
 	@RequestMapping(value = "/test")
 	public String test(Model model) {
-		return "member/update";
+		return "article/articleWrite";
 	}
 }

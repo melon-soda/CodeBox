@@ -6,6 +6,8 @@
 		<typeAlias type="com.codebox.project.dto.ProjectVO" alias="project"/>
 		<typeAlias type="com.codebox.project.dto.FolderVO" alias="folder"/>
 		<typeAlias type="com.codebox.project.dto.FileVO" alias="file"/>
+		<typeAlias type="com.codebox.project.dto.BoardVO" alias="board"/>
+		<typeAlias type="com.codebox.project.dto.ArticleVO" alias="article"/>
 	</typeAliases>
 	
 	<mappers>
@@ -13,5 +15,7 @@
 		<mapper resource="mappings/project-mapping.xml"/>
 		<mapper resource="mappings/folder-mapping.xml"/>
 		<mapper resource="mappings/file-mapping.xml"/>
+		<mapper resource="mappings/board-mapping.xml"/>
+		<mapper resource="mappings/article-mapping.xml"/>
 	</mappers>
 </configuration>

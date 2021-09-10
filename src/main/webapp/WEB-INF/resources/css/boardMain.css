@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#board_1 {
+	height: 50%;
+	width: 50%;
+	float: left;
+	background-color: #ebd;
+}
+
+#board_2 {
+	height: 50%;
+	width: 50%;
+	float: left;
+	background-color: #ade;
+}
+
+#board_3 {
+	height: 50%;
+	width: 50%;
+	float: left;
+	background-color: #ee5;
+}
+
+#board_4 {
+	height: 50%;
+	width: 50%;
+	float: left;
+	background-color: #7e5;
+}
