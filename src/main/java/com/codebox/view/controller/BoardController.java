@@ -1,16 +1,20 @@
 package com.codebox.view.controller;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.codebox.project.article.ArticleService;
 import com.codebox.project.board.BoardService;
 import com.codebox.project.dto.ArticleVO;
 import com.codebox.project.dto.BoardVO;
+import com.codebox.project.utils.SearchObject;
 
 @Controller
 public class BoardController {
@@ -21,6 +25,10 @@ public class BoardController {
 	
 	@RequestMapping(value="/board")
 	public String boardView(BoardVO vo, Model model) {
+		List<BoardVO> boardList = boardService.getAllBoards();
+		
+		model.addAttribute("boardList", boardList);
+		
 		vo.setBoardseq(1);
 		BoardVO board = boardService.getBoard(vo);
 		List<ArticleVO> articleList = articleService.getAllArticles(vo);
@@ -49,5 +57,26 @@ public class BoardController {
 		model.addAttribute("articleList", articleList);
 		
 		return "board/boardDetail";
+	}
+	
+	@ModelAttribute("searchConditionMap")
+	public Map<String, String> searchConditionMaps() {
+		Map<String, String> searchConditionMap = new LinkedHashMap<String, String>();
+		
+		searchConditionMap.put("제목", "TITLE");
+		searchConditionMap.put("내용", "CONTENT");
+		
+		return searchConditionMap;
+	}
+	
+	@RequestMapping(value="/articleSearch")
+	public String serachArticle(SearchObject searchObject, Model model) {
+		List<ArticleVO> articleList = articleService.searchArticle(searchObject);
+		System.out.println(searchObject.getSearchCondition());
+		System.out.println(searchObject.getSearchKeyword());
+		
+		model.addAttribute("articleList", articleList);
+		
+		return "article/articleSearchResult";
 	}
 }

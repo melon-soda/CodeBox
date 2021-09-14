@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.codebox.project.board.BoardService;
 import com.codebox.project.dao.BoardDAO;
 import com.codebox.project.dto.BoardVO;
+import com.codebox.project.utils.SearchObject;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {

@@ -8,6 +8,7 @@
 		<typeAlias type="com.codebox.project.dto.FileVO" alias="file"/>
 		<typeAlias type="com.codebox.project.dto.BoardVO" alias="board"/>
 		<typeAlias type="com.codebox.project.dto.ArticleVO" alias="article"/>
+		<typeAlias type="com.codebox.project.dto.ContributionVO" alias="contribution"/>
 	</typeAliases>
 	
 	<mappers>
@@ -17,5 +18,6 @@
 		<mapper resource="mappings/file-mapping.xml"/>
 		<mapper resource="mappings/board-mapping.xml"/>
 		<mapper resource="mappings/article-mapping.xml"/>
+		<mapper resource="mappings/contribution-mapping.xml"/>
 	</mappers>
 </configuration>

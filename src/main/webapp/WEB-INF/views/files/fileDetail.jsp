@@ -4,11 +4,15 @@
 <html>
 	<head>
 <%@ include file="../common/head.jsp" %>
+		<link rel="stylesheet" href="css/fileDetail.css"/>
 	</head>
 	<body>
 		<div id="wrap">
 <%@ include file="../common/header.jsp" %>
 			<div class="clear">
+			</div>
+			<div id="side_menu" align="center">
+			
 			</div>
 			<div id="main">
 				<div id="source" align="center">
@@ -28,6 +32,9 @@
 						</tr>
 					</table>
 				</div>
+			</div>
+			<div id="file_info" align="center">
+			
 			</div>
 <%@ include file="../common/footer.jsp" %>
 		</div>

@@ -10,4 +10,17 @@
 		INSERT INTO project(projectseq, title)
 		VALUES(projectseq.NEXTVAL, #{title})
 	</insert>
+	
+	<select id="searchProjectByTitle" resultType="project">
+		SELECT *
+		FROM project
+		WHERE title LIKE '%'||#{title}||'%' 
+		ORDER BY projectseq DESC
+	</select>
+	
+	<select id="getProjectByTitle" resultType="project">
+		SELECT *
+		FROM project
+		WHERE title=#{title}
+	</select>
 </mapper>

@@ -23,4 +23,14 @@ public class ProjectServiceImpl implements ProjectService {
 	public void createProject(ProjectVO vo) {
 		projectDao.createProject(vo);
 	}
+
+	@Override
+	public List<ProjectVO> searchProjectByTitle(String title) {
+		return projectDao.searchProjectByTitle(title);
+	}
+
+	@Override
+	public ProjectVO getProjectByTitle(ProjectVO vo) {
+		return projectDao.getProjectByTitle(vo);
+	}
 }

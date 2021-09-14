@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ContributionDAO">
+	<select id="getContributors" resultType="contribution">
+		SELECT *
+		FROM contribution
+		WHERE projectseq=#{projectseq}
+		AND contributiontype=#{contributiontype}
+	</select>
+	
+	<insert id="setContribution">
+		INSERT INTO contribution(contributionseq, id, projectseq, contributiontype)
+		VALUES(contributionseq.NEXTVAL, #{id}, #{projectseq}, #{contributiontype})
+	</insert>
+</mapper>

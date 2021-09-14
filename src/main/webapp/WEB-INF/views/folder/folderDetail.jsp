@@ -5,13 +5,16 @@
 <html>
 	<head>
 <%@ include file="../common/head.jsp" %>
-		<link rel="stylesheet" href="css/projectMain.css"/>
+		<link rel="stylesheet" href="css/folderDetail.css"/>
 		<script type="text/javascript" src="js/code.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
 <%@ include file="../common/header.jsp" %>
 			<div class="clear">
+			</div>
+			<div id="side_menu" align="center">
+
 			</div>
 			<div id="main">
 				<div id="project_code_menu" align="center">
@@ -40,6 +43,9 @@
 						</c:forEach>
 					</table>
 				</div>
+			</div>
+			<div id="folder_info" align="center">
+			
 			</div>
 <%@ include file="../common/footer.jsp" %>
 		</div>

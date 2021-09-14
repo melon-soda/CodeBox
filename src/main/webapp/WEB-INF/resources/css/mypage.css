@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-#wrap {
-	width: 1100px;
-}
-
 #side_menu {
 	width: 25%;
 	float: left;

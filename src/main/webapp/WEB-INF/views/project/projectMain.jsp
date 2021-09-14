@@ -38,6 +38,10 @@
 							</c:forEach>
 						</table>
 					</div>
+					<div id="search" align="center">
+						<input type="text" name="key">
+						<input type="button" name="btn_search" value="검색" onClick="projectSearch()">
+					</div>
 				</div>
 <%@ include file="../common/footer.jsp" %>
 			</div>

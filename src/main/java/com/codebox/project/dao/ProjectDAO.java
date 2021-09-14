@@ -20,4 +20,12 @@ public class ProjectDAO {
 	public void createProject(ProjectVO vo) {
 		mybatis.insert("ProjectDAO.createProject", vo);
 	}
+	
+	public List<ProjectVO> searchProjectByTitle(String title) {
+		return mybatis.selectList("ProjectDAO.searchProjectByTitle", title);
+	}
+	
+	public ProjectVO getProjectByTitle(ProjectVO vo) {
+		return mybatis.selectOne("ProjectDAO.getProjectByTitle", vo);
+	}
 }

@@ -43,6 +43,15 @@
 							</c:forEach>
 						</table>
 					</div>
+					<div id="search_area" align="center">
+						<select name="searchCondition">
+							<c:forEach items="${searchConditionMap}" var="option">
+								<option value="${option.value}">${option.key}
+							</c:forEach>
+						</select>
+						<input type="text" name="searchKeyword"/>
+						<input type="button" value="검색" onClick="articleSearch()"/>
+					</div>
 				</div>
 			</div>
 		</form>

@@ -9,6 +9,7 @@ import com.codebox.project.article.ArticleService;
 import com.codebox.project.dao.ArticleDAO;
 import com.codebox.project.dto.ArticleVO;
 import com.codebox.project.dto.BoardVO;
+import com.codebox.project.utils.SearchObject;
 
 @Service("articleService")
 public class ArticleServiceImpl implements ArticleService {
@@ -23,5 +24,30 @@ public class ArticleServiceImpl implements ArticleService {
 	@Override
 	public ArticleVO getArticle(ArticleVO vo) {
 		return articleDao.getArticle(vo);
+	}
+
+	@Override
+	public void insertArticle(ArticleVO vo) {
+		articleDao.insertArticle(vo);
+	}
+	
+	@Override
+	public int getLastArticleseqByAuthor(ArticleVO vo) {
+		return articleDao.getLastArticleseqByAuthor(vo);
+	}
+	
+	@Override
+	public void updateArticle(ArticleVO vo) {
+		articleDao.updateArticle(vo);
+	}
+	
+	@Override
+	public void deleteArticle(ArticleVO vo) {
+		articleDao.deleteArticle(vo);
+	}
+
+	@Override
+	public List<ArticleVO> searchArticle(SearchObject searchObject) {
+		return articleDao.searchArticle(searchObject);
 	}
 }

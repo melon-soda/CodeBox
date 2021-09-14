@@ -8,4 +8,8 @@ public interface ProjectService {
 	List<ProjectVO> getAllProjects();
 	
 	void createProject(ProjectVO vo);
+	
+	List<ProjectVO> searchProjectByTitle(String title);
+	
+	ProjectVO getProjectByTitle(ProjectVO vo);
 }

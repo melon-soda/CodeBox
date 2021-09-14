@@ -5,6 +5,7 @@
 <html>
 	<head>
 <%@ include file="../common/head.jsp" %>
+		<script type="text/javascript" src="js/article.js"></script>
 	</head>
 	<body>
 		<div id="wrap">

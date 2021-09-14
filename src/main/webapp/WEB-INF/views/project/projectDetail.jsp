@@ -5,13 +5,16 @@
 <html>
 	<head>
 <%@ include file="../common/head.jsp" %>
-		<link rel="stylesheet" href="css/projectMain.css"/>
+		<link rel="stylesheet" href="css/projectDetail.css"/>
 		<script type="text/javascript" src="js/code.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
 <%@ include file="../common/header.jsp" %>
 			<div class="clear">
+			</div>
+			<div id="side_menu" align="center">
+
 			</div>
 			<div id="main">
 				<div id="project_code_menu" align="center">
@@ -22,7 +25,7 @@
 				<div id="source" align="center">
 					<table id="source_table" border="1" style="width:700px;">
 						<tr>
-							<th colspan="5">SOURCE</th>
+						<th colspan="5">SOURCE</th>
 						</tr>
 						<c:forEach items="${folderList}" var="folder">
 							<tr>
@@ -39,6 +42,26 @@
 							</tr>
 						</c:forEach>
 					</table>
+				</div>
+			</div>
+			<div id="project_info" align="center">
+				<div id="founders">
+					<h3>Founders</h3>
+					<hr>
+					<ul>
+						<c:forEach items="${founderList}" var="founder">
+							<li>${founder.id}</li>
+						</c:forEach>
+					</ul>
+				</div>
+				<div id="contributors">
+					<h3>Contributors</h3>
+					<hr>
+					<ul>
+						<c:forEach items="${contributorList}" var="contributor">
+							<li>${contributor.id}</li>
+						</c:forEach>
+					</ul>
 				</div>
 			</div>
 <%@ include file="../common/footer.jsp" %>

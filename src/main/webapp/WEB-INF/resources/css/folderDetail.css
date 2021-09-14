@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1500px;
+	height: 1000px;
+	margin: 0 auto;
+	align: center;
+}
+
+#side_menu {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background-color: #eee;
+}
+
+#main {
+	float: left;
+	width: 60%;
+}
+
+#folder_info {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background-color: #eee;
+}

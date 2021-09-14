@@ -12,4 +12,39 @@
 		FROM article
 		WHERE articleseq=#{articleseq}
 	</select>
+	
+	<insert id="insertArticle">
+		INSERT INTO article(articleseq, boardseq, author, title, content)
+		VALUES(articleseq.NEXTVAL, #{boardseq}, #{author}, #{title}, #{content})
+	</insert>
+	
+	<select id="getLastArticleseqByAuthor" resultType="int">
+		SELECT MAX(articleseq)
+		FROM article
+		WHERE author=#{author}
+	</select>
+	
+	<update id="updateArticle">
+		UPDATE article
+		SET boardseq=#{boardseq}, moddate=SYSDATE, title=#{title}, content=#{content}
+		WHERE articleseq=#{articleseq}
+	</update>
+	
+	<delete id="deleteArticle">
+		DELETE
+		FROM article
+		WHERE articleseq=#{articleseq}
+	</delete>
+	
+	<select id="searchArticle" resultType="article">
+		SELECT * FROM article
+		WHERE 1 = 1
+			<if test="searchCondition=='TITLE'">
+				AND title LIKE '%'||#{searchKeyword}||'%'
+			</if>
+			<if test="searchCondition=='CONTENT'">
+				AND content LIKE '%'||#{searchKeyword}||'%'
+			</if>
+			ORDER BY articleseq DESC
+	</select>
 </mapper>
